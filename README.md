@@ -68,8 +68,8 @@ $$
 
 ```
 kmeans-iris-demo/
-├── main.py                     # Точка входа, оркестрация пайплайна
-├── kmeans_core.py              # Чистая реализация K-Means (E-step, M-step)
+├── main.py                     # Точка входа
+├── kmeans.py              # Чистая реализация K-Means (E-step, M-step)
 ├── data_utils.py               # Загрузка Iris, стандартизация, PCA, Silhouette
 ├── visualize.py                # Покадровая визуализация и генерация GIF
 ├── requirements.txt            # Зависимости
@@ -83,7 +83,7 @@ kmeans-iris-demo/
 
 | Модуль | Ответственность                                                                               |
 |--------|-----------------------------------------------------------------------------------------------|
-| `kmeans_core.py` | Инициализация центроидов, E-step, M-step, проверка сходимости, обработка пустых кластеров     |
+| `kmeans.py` | Инициализация центроидов, E-step, M-step, проверка сходимости, обработка пустых кластеров     |
 | `data_utils.py` | Загрузка `load_iris`, `StandardScaler`, `PCA`, подбор $k$ через `silhouette_score`            |
 | `visualize.py` | `plot_kmeans_step`- отрисовка одной итерации; `create_animation` - сборка GIF через `imageio` |
 | `main.py` | Склеивает модули в единый пайплайн: данные -> оптимальный k -> кластеризация -> анимация      |
@@ -95,7 +95,7 @@ kmeans-iris-demo/
 ### 1. Клонирование и установка
 
 ```bash
-git clone https://github.com/nali-0/kmeans.git
+git clone https://github.com/nali-0/k-means-from-scratch.git
 cd kmeans
 pip install -r requirements.txt
 ```
@@ -120,11 +120,11 @@ python main.py
 - [x] Покадровая визуализация + сборка GIF
 
 **Из sklearn использовано только:**
-- `load_iris` — загрузка данных
-- `StandardScaler` — стандартизация
-- `PCA` — снижение размерности
-- `silhouette_score` — метрика качества кластеризации
-- `KMeans` — только для подбора оптимального $k$ через Silhouette
+- `load_iris` - загрузка данных
+- `StandardScaler` - стандартизация
+- `PCA` - снижение размерности
+- `silhouette_score` - метрика качества кластеризации
+- `KMeans` - только для подбора оптимального $k$ через Silhouette
 
 ---
 
