@@ -138,4 +138,4 @@ scikit-learn~=1.6.1
 ```
 
 ## См. также
-- [DBSCAN from Scratch](https://github.com/ТВОЙ_НИК/dbscan-interactive) — интерактивная реализация DBSCAN
+- [DBSCAN from Scratch]([https://github.com/ТВОЙ_НИК/dbscan-interactive](https://github.com/nali-0/dbscan-from-scratch)) — интерактивная реализация DBSCAN
