@@ -136,3 +136,6 @@ matplotlib~=3.9.4
 imageio~=2.37.2
 scikit-learn~=1.6.1
 ```
+
+## См. также
+- [DBSCAN from Scratch](https://github.com/ТВОЙ_НИК/dbscan-interactive) — интерактивная реализация DBSCAN
